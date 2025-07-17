@@ -5,7 +5,7 @@ import { generateSimulatedLogs } from './services/geminiService';
 import type { ApiLog } from './types';
 
 const POLLING_INTERVAL_MS = 5000;
-const API_ENDPOINT = 'https://almuerzoclbackend.pages.dev/restaurants.json';
+const API_ENDPOINT = '/api/restaurants';
 
 const App: React.FC = () => {
     const [logs, setLogs] = useState<ApiLog[]>([]);
