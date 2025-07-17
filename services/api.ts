@@ -1,7 +1,9 @@
 
 export async function fetchRestaurantData(): Promise<Response> {
   try {
-    const response = await fetch('https://almuerzoclbackend.pages.dev/restaurants.json', { cache: 'no-store' });
+    // Point to the new serverless function endpoint. Using a relative URL
+    // makes it work seamlessly in development and production environments.
+    const response = await fetch('/api/restaurants', { cache: 'no-store' });
     return response;
   } catch (error) {
     // This catch block handles network errors (e.g., server unreachable, DNS issues)
