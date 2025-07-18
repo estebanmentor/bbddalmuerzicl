@@ -1,57 +1,525 @@
+
 [
   {
     "name": "Sazón Criollo",
     "description": "Descubre los sabores auténticos de Chile en Sazón Criollo. Un rincón acogedor en el corazón de Santiago donde cada plato cuenta una historia de tradición y sabor. ¡Te esperamos para una experiencia inolvidable!",
     "address": "Calle Moneda 567, Santiago Centro",
     "imageUrl": "https://picsum.photos/seed/SazonCriollo/800/600",
-    "location": {
-      "lat": -33.442,
-      "lon": -70.650
-    },
+    "location": { "lat": -33.442, "lon": -70.650 },
     "menu": [
-      {
-        "name": "Pastel de Choclo",
-        "description": "Tradicional pastel de choclo con pino de carne molida, pollo, aceitunas y huevo duro. Un clásico de la abuela.",
-        "regularPrice": 8500,
-        "salePrice": 7990,
-        "rating": 4.9,
-        "imageUrl": "https://picsum.photos/seed/pastelchoclo/400/300"
-      },
-      {
-        "name": "Lomo a lo Pobre",
-        "description": "Contundente lomo de vacuno a la plancha, acompañado de papas fritas caseras, cebolla caramelizada y dos huevos fritos.",
-        "regularPrice": 9800,
-        "rating": 4.8,
-        "imageUrl": "https://picsum.photos/seed/lomoalopobre/400/300"
-      },
-      {
-        "name": "Cazuela de Vacuno",
-        "description": "Sustanciosa cazuela de vacuno con papa, zapallo, choclo y porotos verdes. Perfecta para reponer energías.",
-        "regularPrice": 8200,
-        "rating": 4.7,
-        "imageUrl": "https://picsum.photos/seed/cazuela/400/300"
-      }
+      { "name": "Pastel de Choclo", "description": "Tradicional pastel de choclo con pino de carne molida, pollo, aceitunas y huevo duro.", "regularPrice": 8500, "salePrice": 7990, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/pastelchoclo/400/300" },
+      { "name": "Lomo a lo Pobre", "description": "Contundente lomo de vacuno a la plancha, con papas fritas caseras, cebolla caramelizada y dos huevos fritos.", "regularPrice": 9800, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/lomoalopobre/400/300" },
+      { "name": "Cazuela de Vacuno", "description": "Sustanciosa cazuela de vacuno con papa, zapallo, choclo y porotos verdes. Perfecta para reponer energías.", "regularPrice": 8200, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/cazuela/400/300" }
     ],
-    "paymentMethods": [
-      "Efectivo",
-      "Tarjeta",
-      "Transferencia",
-      "Junaeb (Sodexo)"
+    "paymentMethods": [ "Efectivo", "Tarjeta", "Transferencia", "Junaeb (Sodexo)" ],
+    "discounts": [ { "sponsor": "Banco de Chile", "type": "$", "amount": 2000, "validFrom": "2024-07-15", "validTo": "2024-08-15", "daysOfWeek": ["Jueves", "Viernes"], "appliesTo": "Platos sobre $8000" } ],
+    "event": { "title": "Semana de la Chilenidad", "description": "¡Celebra con nosotros! 20% de descuento en todos los almuerzos esta semana." }
+  },
+  {
+    "name": "El Rápido Gourmet",
+    "description": "Comida casera para llevar, rápida, deliciosa y a un precio justo. La solución perfecta para tu almuerzo diario.",
+    "address": "Apoquindo 3450, Las Condes",
+    "imageUrl": "https://picsum.photos/seed/RapidoGourmet/800/600",
+    "location": { "lat": -33.416, "lon": -70.594 },
+    "menu": [
+      { "name": "Menú del Día", "description": "Plato de fondo, ensalada y bebida. Varía todos los días.", "regularPrice": 6500, "rating": 4.5, "imageUrl": "https://picsum.photos/seed/menudia/400/300" },
+      { "name": "Quiche de Espinaca y Ricotta", "description": "Suave quiche individual, perfecto para un almuerzo ligero.", "regularPrice": 5500, "rating": 4.6, "imageUrl": "https://picsum.photos/seed/quiche/400/300" }
     ],
-    "discounts": [
-      {
-        "sponsor": "Banco de Chile",
-        "type": "$",
-        "amount": 2000,
-        "validFrom": "2024-07-15",
-        "validTo": "2024-08-15",
-        "daysOfWeek": ["Jueves", "Viernes"],
-        "appliesTo": "Platos sobre $8000"
-      }
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Sushi Zen",
+    "description": "Fusión de sabores japoneses y peruanos. Rolls creativos y los ingredientes más frescos.",
+    "address": "Av. Vitacura 2900, Vitacura",
+    "imageUrl": "https://picsum.photos/seed/SushiZen/800/600",
+    "location": { "lat": -33.407, "lon": -70.603 },
+    "menu": [
+      { "name": "Acevichado Roll", "description": "Camarón tempura y palta, cubierto en atún con salsa acevichada.", "regularPrice": 9200, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/acevichado/400/300" },
+      { "name": "Gyozas de Cerdo", "description": "Empanaditas japonesas al vapor con un toque a la plancha.", "regularPrice": 6000, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/gyozas/400/300" }
     ],
-    "event": {
-      "title": "Semana de la Chilenidad",
-      "description": "¡Celebra con nosotros! 20% de descuento en todos los almuerzos esta semana."
-    }
+    "paymentMethods": [ "Tarjeta", "Transferencia" ],
+    "discounts": [ { "sponsor": "RappiCard", "type": "%", "amount": 20, "validFrom": "2024-01-01", "validTo": "2024-12-31", "daysOfWeek": ["Lunes", "Martes"], "appliesTo": "Toda la carta" } ]
+  },
+  {
+    "name": "Pizza Nostra",
+    "description": "Auténtica pizza napolitana horneada a la leña. Masa madre y los mejores ingredientes italianos.",
+    "address": "Barrio Italia, Av. Santa Isabel 0350, Providencia",
+    "imageUrl": "https://picsum.photos/seed/PizzaNostra/800/600",
+    "location": { "lat": -33.449, "lon": -70.627 },
+    "menu": [
+      { "name": "Pizza Margherita", "description": "Salsa de tomate San Marzano, mozzarella fresca, albahaca.", "regularPrice": 10500, "rating": 5.0, "imageUrl": "https://picsum.photos/seed/margherita/400/300" },
+      { "name": "Pizza Diavola", "description": "Salsa de tomate, mozzarella y salami picante italiano.", "regularPrice": 12000, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/diavola/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Verde que te Quiero Verde",
+    "description": "Ensaladas, bowls y wraps 100% vegetarianos y veganos. Come rico, sano y consciente.",
+    "address": "Orrego Luco 054, Providencia",
+    "imageUrl": "https://picsum.photos/seed/VerdeQuiero/800/600",
+    "location": { "lat": -33.424, "lon": -70.613 },
+    "menu": [
+      { "name": "Bowl Buddha", "description": "Quinoa, palta, garbanzos, camote asado, y mix de hojas verdes con aderezo de tahini.", "regularPrice": 8900, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/buddhabowl/400/300" },
+      { "name": "Wrap Falafel", "description": "Falafel casero, hummus, lechuga, tomate y salsa de yogurt vegana en pan pita.", "regularPrice": 7500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/falafelwrap/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Junaeb (Sodexo)" ],
+    "discounts": [ { "sponsor": "Descuento Estudiante", "type": "%", "amount": 15, "validFrom": "2024-03-01", "validTo": "2024-12-31", "daysOfWeek": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"], "appliesTo": "Presentando TNE" } ]
+  },
+  {
+    "name": "La Mar Cevicheria",
+    "description": "Los sabores del Pacífico en tu plato. Ceviches, tiraditos y causas con el toque peruano que nos caracteriza.",
+    "address": "Nueva Costanera 3922, Vitacura",
+    "imageUrl": "https://picsum.photos/seed/LaMar/800/600",
+    "location": { "lat": -33.402, "lon": -70.589 },
+    "menu": [
+      { "name": "Ceviche Clásico", "description": "Pesca del día en leche de tigre, con camote, choclo y cancha serrana.", "regularPrice": 13500, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/cevicheclasico/400/300" },
+      { "name": "Lomo Saltado", "description": "Trozos de filete salteados con cebolla, tomate y papas fritas. Acompañado de arroz.", "regularPrice": 14000, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/lomosaltado/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Efectivo" ],
+    "discounts": []
+  },
+  {
+    "name": "El Fogón del Gaucho",
+    "description": "Parrillada argentina de primera calidad. Cortes premium y un ambiente rústico y acogedor.",
+    "address": "Av. La Dehesa 1800, Lo Barnechea",
+    "imageUrl": "https://picsum.photos/seed/FogonGaucho/800/600",
+    "location": { "lat": -33.364, "lon": -70.518 },
+    "menu": [
+      { "name": "Bife de Chorizo", "description": "350gr del mejor bife de chorizo a la parrilla, al punto que prefieras.", "regularPrice": 18000, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/bifechorizo/400/300" },
+      { "name": "Provoleta a la Parrilla", "description": "Queso provolone derretido con orégano y un toque de aceite de oliva.", "regularPrice": 8500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/provoleta/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Efectivo" ],
+    "discounts": []
+  },
+  {
+    "name": "Café de la Esquina",
+    "description": "Un café de especialidad con la mejor repostería casera. Ideal para una pausa en tu día.",
+    "address": "Lastarria 90, Santiago Centro",
+    "imageUrl": "https://picsum.photos/seed/CafeEsquina/800/600",
+    "location": { "lat": -33.438, "lon": -70.638 },
+    "menu": [
+      { "name": "Flat White", "description": "Café de grano seleccionado por nuestros baristas.", "regularPrice": 2800, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/flatwhite/400/300" },
+      { "name": "Torta de Zanahoria", "description": "Húmeda y esponjosa, con un frosting de queso crema irresistible.", "regularPrice": 4500, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/tortazanahoria/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Efectivo" ],
+    "discounts": []
+  },
+  {
+    "name": "La Fuente Chilena",
+    "description": "Sándwiches chilenos con historia. La mejor mechada y el pan amasado más fresco de la ciudad.",
+    "address": "Av. Apoquindo 4775, Las Condes",
+    "imageUrl": "https://picsum.photos/seed/FuenteChilena/800/600",
+    "location": { "lat": -33.411, "lon": -70.575 },
+    "menu": [
+      { "name": "Chacarero", "description": "Carne de vacuno, porotos verdes, tomate, ají verde en marraqueta.", "regularPrice": 7900, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/chacarero/400/300" },
+      { "name": "Barros Luco", "description": "El clásico sándwich de carne a la plancha y queso derretido.", "regularPrice": 7500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/barrosluco/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta", "Junaeb (Sodexo)" ],
+    "discounts": []
+  },
+  {
+    "name": "Taco Loco",
+    "description": "Auténtica taquería mexicana. Tacos al pastor, carnitas y cochinita pibil como si estuvieras en México.",
+    "address": "Merced 346, Santiago Centro",
+    "imageUrl": "https://picsum.photos/seed/TacoLoco/800/600",
+    "location": { "lat": -33.439, "lon": -70.643 },
+    "menu": [
+      { "name": "Tacos al Pastor (3 un.)", "description": "Carne de cerdo marinada en achiote, con piña, cilantro y cebolla.", "regularPrice": 6800, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/tacosalpastor/400/300" },
+      { "name": "Quesadilla Gringa", "description": "Tortilla de harina con queso y carne al pastor.", "regularPrice": 7200, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/quesadillagringa/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": [ { "sponsor": "Martes de Tacos", "type": "%", "amount": 25, "validFrom": "2024-01-01", "validTo": "2024-12-31", "daysOfWeek": ["Martes"], "appliesTo": "Todos los tacos" } ]
+  },
+  {
+    "name": "Bhan Thai",
+    "description": "Un viaje a Tailandia a través de sus sabores. Curry, Pad Thai y sopas que te transportarán.",
+    "address": "Alonso de Córdova 4152, Vitacura",
+    "imageUrl": "https://picsum.photos/seed/BhanThai/800/600",
+    "location": { "lat": -33.400, "lon": -70.579 },
+    "menu": [
+      { "name": "Pad Thai de Camarones", "description": "Fideos de arroz salteados con camarones, tofu, maní y brotes de soya.", "regularPrice": 11500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/padthai/400/300" },
+      { "name": "Curry Verde de Pollo", "description": "Pollo en cremosa salsa de curry verde y leche de coco, con verduras.", "regularPrice": 10800, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/curryverde/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "El Mesón del Abuelo",
+    "description": "Comida española tradicional. Tapas, paellas y cochinillo en un ambiente familiar.",
+    "address": "Don Carlos 2898, Las Condes",
+    "imageUrl": "https://picsum.photos/seed/MesonAbuelo/800/600",
+    "location": { "lat": -33.414, "lon": -70.584 },
+    "menu": [
+      { "name": "Tortilla de Patatas", "description": "La clásica tortilla española, jugosa y hecha al momento.", "regularPrice": 7500, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/tortilla/400/300" },
+      { "name": "Paella Valenciana (para 2)", "description": "Con pollo, conejo, judías verdes y garrofón. Hecha con arroz bomba.", "regularPrice": 25000, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/paella/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Efectivo" ],
+    "discounts": []
+  },
+  {
+    "name": "Emporio La Rosa",
+    "description": "Heladería artesanal y cafetería. Sabores únicos y premiados internacionalmente.",
+    "address": "Parque Forestal, Merced 291, Santiago",
+    "imageUrl": "https://picsum.photos/seed/EmporioRosa/800/600",
+    "location": { "lat": -33.437, "lon": -70.640 },
+    "menu": [
+      { "name": "Helado Doble", "description": "Elige dos de nuestros sabores únicos, como Miel de Ulmo o Chocolate Araucano.", "regularPrice": 4200, "rating": 5.0, "imageUrl": "https://picsum.photos/seed/helado/400/300" },
+      { "name": "Sándwich en Pan de Molde", "description": "Queso de cabra, rúcula y jamón serrano.", "regularPrice": 6900, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/sandwichquesocabra/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Da' Mare",
+    "description": "Sabores del mar de Italia. Pastas frescas con mariscos y pescados del día.",
+    "address": "Isidora Goyenechea 3200, Las Condes",
+    "imageUrl": "https://picsum.photos/seed/DaMare/800/600",
+    "location": { "lat": -33.418, "lon": -70.598 },
+    "menu": [
+      { "name": "Spaghetti ai Frutti di Mare", "description": "Spaghetti con almejas, choritos, calamares y camarones en salsa de tomate.", "regularPrice": 14500, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/fruttidimare/400/300" },
+      { "name": "Risotto de Camarones al Limón", "description": "Cremoso risotto con camarones y un toque cítrico.", "regularPrice": 13800, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/risottocamaron/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "La Burger Joint",
+    "description": "Hamburguesas de autor, con carne de primera y combinaciones que te sorprenderán.",
+    "address": "Tegualda 1517, Barrio Italia, Ñuñoa",
+    "imageUrl": "https://picsum.photos/seed/BurgerJoint/800/600",
+    "location": { "lat": -33.454, "lon": -70.622 },
+    "menu": [
+      { "name": "La Clásica", "description": "Hamburguesa de vacuno, queso cheddar, lechuga, tomate, pepinillos y salsa de la casa.", "regularPrice": 8900, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/burgerclasica/400/300" },
+      { "name": "Blue Cheese Burger", "description": "Hamburguesa con queso azul, cebolla caramelizada y rúcula.", "regularPrice": 9500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/bluecheeseburger/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Efectivo", "Junaeb (Sodexo)" ],
+    "discounts": []
+  },
+  {
+    "name": "Patio de Comidas del Sol",
+    "description": "Variedad para todos los gustos en un solo lugar. Ideal para grupos.",
+    "address": "Mall Plaza Vespucio, La Florida",
+    "imageUrl": "https://picsum.photos/seed/PatioSol/800/600",
+    "location": { "lat": -33.524, "lon": -70.609 },
+    "menu": [
+      { "name": "Combo Hamburguesa", "description": "Hamburguesa, papas fritas y bebida.", "regularPrice": 7000, "rating": 4.0, "imageUrl": "https://picsum.photos/seed/combohamburguesa/400/300" },
+      { "name": "Pizza Individual", "description": "Elige tus 2 ingredientes favoritos.", "regularPrice": 6500, "rating": 4.1, "imageUrl": "https://picsum.photos/seed/pizzaindividual/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta", "Junaeb (Sodexo)" ],
+    "discounts": []
+  },
+  {
+    "name": "Schopdog",
+    "description": "El clásico chileno. Schops helados y sándwiches contundentes.",
+    "address": "Portal Lyon, Av. Providencia 2198, Providencia",
+    "imageUrl": "https://picsum.photos/seed/Schopdog/800/600",
+    "location": { "lat": -33.425, "lon": -70.609 },
+    "menu": [
+      { "name": "Completo Italiano", "description": "Vienesa en pan de completo con palta, tomate y mayonesa casera.", "regularPrice": 4500, "rating": 4.5, "imageUrl": "https://picsum.photos/seed/completoitaliano/400/300" },
+      { "name": "Schop Royal 500cc", "description": "Cerveza de barril heladita.", "regularPrice": 3500, "rating": 4.6, "imageUrl": "https://picsum.photos/seed/schop/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "El Huerto",
+    "description": "Pioneros en cocina vegetariana y vegana en Chile. Platos creativos y nutritivos desde 1980.",
+    "address": "Orrego Luco 054, Providencia",
+    "imageUrl": "https://picsum.photos/seed/ElHuerto/800/600",
+    "location": { "lat": -33.424, "lon": -70.613 },
+    "menu": [
+      { "name": "Pastel de Jaiba Vegano", "description": "Sorprendente versión vegana del clásico, a base de champiñones y tofu.", "regularPrice": 9800, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/jaibavegana/400/300" },
+      { "name": "Jugo Prensado en Frío", "description": "Mix de betarraga, zanahoria y jengibre. Lleno de vitaminas.", "regularPrice": 4200, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/jugoprensado/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Bar Liguria",
+    "description": "Un clásico de la bohemia santiaguina. Comida chilena, buenos tragos y un ambiente único.",
+    "address": "Av. Providencia 1373, Providencia",
+    "imageUrl": "https://picsum.photos/seed/Liguria/800/600",
+    "location": { "lat": -33.429, "lon": -70.619 },
+    "menu": [
+      { "name": "Plateada con Puré Picante", "description": "Plateada cocinada lentamente por horas, se deshace en la boca.", "regularPrice": 15000, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/plateada/400/300" },
+      { "name": "Pichuncho", "description": "El aperitivo chileno por excelencia: pisco con vermut blanco.", "regularPrice": 4500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/pichuncho/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Bocanáriz",
+    "description": "El paraíso para los amantes del vino. Más de 300 etiquetas chilenas y platos para maridar.",
+    "address": "José Victorino Lastarria 276, Santiago",
+    "imageUrl": "https://picsum.photos/seed/Bocanariz/800/600",
+    "location": { "lat": -33.438, "lon": -70.639 },
+    "menu": [
+      { "name": "Vuelo de Tintos", "description": "Degustación de 3 copas de vinos tintos de valles distintos.", "regularPrice": 12000, "rating": 5.0, "imageUrl": "https://picsum.photos/seed/vuelotintos/400/300" },
+      { "name": "Tabla de Quesos Chilenos", "description": "Selección de quesos de campo para acompañar tu vino.", "regularPrice": 14000, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/tablaquesos/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Deli C'est Si Bon",
+    "description": "Sandwiches y ensaladas gourmet para un almuerzo rápido pero sofisticado.",
+    "address": "El Bosque Norte 0125, Las Condes",
+    "imageUrl": "https://picsum.photos/seed/CestSiBon/800/600",
+    "location": { "lat": -33.419, "lon": -70.603 },
+    "menu": [
+      { "name": "Sandwich de Salmón Ahumado", "description": "En pan ciabatta con queso crema, alcaparras y rúcula.", "regularPrice": 8500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/sandwichsalmon/400/300" },
+      { "name": "Ensalada César con Pollo", "description": "Lechuga, pollo grillado, crutones, queso parmesano y aderezo césar.", "regularPrice": 7900, "rating": 4.6, "imageUrl": "https://picsum.photos/seed/ensaladacesar/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Junaeb (Sodexo)" ],
+    "discounts": []
+  },
+  {
+    "name": "El Ancla",
+    "description": "Comida del mar con la frescura del Mercado Central. Pailas marinas, pescados fritos y más.",
+    "address": "Mercado Central, Local 123, Santiago",
+    "imageUrl": "https://picsum.photos/seed/ElAncla/800/600",
+    "location": { "lat": -33.435, "lon": -70.651 },
+    "menu": [
+      { "name": "Paila Marina", "description": "Contundente sopa con la mejor selección de mariscos y pescado.", "regularPrice": 11000, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/pailamarina/400/300" },
+      { "name": "Merluza Frita con Agregado", "description": "Clásica merluza austral frita, crocante por fuera y tierna por dentro.", "regularPrice": 9500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/merluzafrita/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Ramen Kintaro",
+    "description": "Auténtico ramen japonés. Caldos cocinados por más de 12 horas para un sabor profundo.",
+    "address": "Monjitas 550, Santiago Centro",
+    "imageUrl": "https://picsum.photos/seed/Kintaro/800/600",
+    "location": { "lat": -33.438, "lon": -70.645 },
+    "menu": [
+      { "name": "Tonkotsu Ramen", "description": "Caldo de cerdo cremoso, con chashu, huevo marinado, y fideos caseros.", "regularPrice": 9800, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/tonkotsuramen/400/300" },
+      { "name": "Shoyu Ramen", "description": "Caldo a base de soya, más ligero pero lleno de umami.", "regularPrice": 9200, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/shoyuramen/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "El Taller",
+    "description": "Cocina de autor en un ambiente relajado y creativo. Un menú que cambia con las estaciones.",
+    "address": "Providencia 1467, Providencia",
+    "imageUrl": "https://picsum.photos/seed/ElTaller/800/600",
+    "location": { "lat": -33.428, "lon": -70.617 },
+    "menu": [
+      { "name": "Menú de Degustación 3 Tiempos", "description": "Una sorpresa del chef con los mejores productos del mercado.", "regularPrice": 18000, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/menudegustacion/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": [],
+    "event": { "title": "Noche de Jazz en Vivo", "description": "Todos los jueves, música en vivo para acompañar tu cena." }
+  },
+  {
+    "name": "Gema",
+    "description": "Pastelería y brunch de alta gama. Un lugar para darse un gusto y disfrutar sin apuros.",
+    "address": "Paseo El Mañío 1630, Vitacura",
+    "imageUrl": "https://picsum.photos/seed/Gema/800/600",
+    "location": { "lat": -33.398, "lon": -70.584 },
+    "menu": [
+      { "name": "Huevos Benedictinos", "description": "Sobre muffin inglés con palta y salmón ahumado, bañados en salsa holandesa.", "regularPrice": 9500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/benedictinos/400/300" },
+      { "name": "Croissant Relleno de Almendras", "description": "Laminado perfecto, relleno de frangipane y cubierto de almendras.", "regularPrice": 3800, "rating": 5.0, "imageUrl": "https://picsum.photos/seed/croissantalmendras/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Le Bistrot de Gaetan",
+    "description": "Clásica cocina francesa en un ambiente íntimo y romántico. Un pedazo de París en Santiago.",
+    "address": "Santa Magdalena 187, Providencia",
+    "imageUrl": "https://picsum.photos/seed/LeBistrot/800/600",
+    "location": { "lat": -33.422, "lon": -70.609 },
+    "menu": [
+      { "name": "Boeuf Bourguignon", "description": "Carne de vacuno estofada lentamente en vino tinto de Borgoña.", "regularPrice": 16000, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/boeufbourguignon/400/300" },
+      { "name": "Sopa de Cebolla", "description": "Gratinada con queso Gruyère, un clásico reconfortante.", "regularPrice": 8500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/sopacebolla/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Efectivo" ],
+    "discounts": []
+  },
+  {
+    "name": "Quick Lunch Oficina",
+    "description": "El menú ejecutivo más conveniente y sabroso del sector financiero.",
+    "address": "Roger de Flor 2900, Las Condes",
+    "imageUrl": "https://picsum.photos/seed/QuickLunch/800/600",
+    "location": { "lat": -33.419, "lon": -70.596 },
+    "menu": [
+      { "name": "Menú Ejecutivo", "description": "Plato de fondo, ensalada o sopa, postre y bebida.", "regularPrice": 8000, "rating": 4.5, "imageUrl": "https://picsum.photos/seed/menuejecutivo/400/300" },
+      { "name": "Lasaña Boloñesa", "description": "La clásica lasaña con nuestra receta secreta.", "regularPrice": 7500, "rating": 4.6, "imageUrl": "https://picsum.photos/seed/lasana/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Junaeb (Sodexo)", "Ticket Restaurant" ],
+    "discounts": []
+  },
+  {
+    "name": "El Griego Auténtico",
+    "description": "Sabores mediterráneos que te transportarán a las islas griegas. Gyros, moussaka y más.",
+    "address": "Constitución 170, Providencia",
+    "imageUrl": "https://picsum.photos/seed/GriegoAutentico/800/600",
+    "location": { "lat": -33.431, "lon": -70.630 },
+    "menu": [
+      { "name": "Gyro de Cordero", "description": "Pan pita relleno de cordero, tomate, cebolla, papas fritas y salsa tzatziki.", "regularPrice": 8900, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/gyro/400/300" },
+      { "name": "Moussaka", "description": "Pastel de berenjenas y carne molida, cubierto con bechamel.", "regularPrice": 10500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/moussaka/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "La Picá de la Esquina",
+    "description": "Comida chilena casera, abundante y a buen precio. La mejor picada del barrio.",
+    "address": "San Diego 1500, Santiago",
+    "imageUrl": "https://picsum.photos/seed/PicaEsquina/800/600",
+    "location": { "lat": -33.461, "lon": -70.648 },
+    "menu": [
+      { "name": "Porotos con Riendas", "description": "El plato más chileno, con longaniza y un toque de ají color.", "regularPrice": 5500, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/porotosriendas/400/300" },
+      { "name": "Pollo Arvejado con Arroz", "description": "Un clásico del almuerzo familiar chileno.", "regularPrice": 6000, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/polloarvejado/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Junaeb (Sodexo)" ],
+    "discounts": []
+  },
+  {
+    "name": "Vietnam Discovery",
+    "description": "Sabores frescos y aromáticos del sudeste asiático. Pho, banh mi y rollitos de verano.",
+    "address": "Loreto 324, Recoleta",
+    "imageUrl": "https://picsum.photos/seed/VietnamDiscovery/800/600",
+    "location": { "lat": -33.430, "lon": -70.635 },
+    "menu": [
+      { "name": "Sopa Pho Bo", "description": "Caldo de res con fideos de arroz, finas láminas de carne y hierbas frescas.", "regularPrice": 9500, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/phobo/400/300" },
+      { "name": "Banh Mi de Cerdo", "description": "Baguette vietnamita con cerdo a la parrilla, encurtidos y cilantro.", "regularPrice": 7800, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/banhmi/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Amado 27",
+    "description": "Cocina de mercado con ingredientes locales y de temporada. Simple, elegante y delicioso.",
+    "address": "Manuel Montt 27, Providencia",
+    "imageUrl": "https://picsum.photos/seed/Amado27/800/600",
+    "location": { "lat": -33.432, "lon": -70.623 },
+    "menu": [
+      { "name": "Pesca del Día a la Plancha", "description": "Con puré de arvejas y menta.", "regularPrice": 13500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/pescadeldia/400/300" },
+      { "name": "Creme Brulee de Naranja", "description": "Clásico postre francés con un toque cítrico.", "regularPrice": 5500, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/cremebrulee/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "La Fabbrica",
+    "description": "Pasta fresca hecha a mano todos los días. Un trozo de la Emilia-Romaña en Chile.",
+    "address": "Plaza Las Lilas, Providencia",
+    "imageUrl": "https://picsum.photos/seed/LaFabbrica/800/600",
+    "location": { "lat": -33.427, "lon": -70.596 },
+    "menu": [
+      { "name": "Tagliatelle al Ragu", "description": "La auténtica salsa boloñesa cocinada por 4 horas.", "regularPrice": 11000, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/tagliatelleragu/400/300" },
+      { "name": "Ravioles de Espinaca y Ricotta", "description": "En una suave salsa de mantequilla y salvia.", "regularPrice": 10500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/raviolespinaca/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Efectivo" ],
+    "discounts": []
+  },
+  {
+    "name": "D'leite",
+    "description": "Helados de autor con sabores que rotan semanalmente. Pura creatividad y sabor.",
+    "address": "Paseo Bulnes 150, Santiago",
+    "imageUrl": "https://picsum.photos/seed/Dleite/800/600",
+    "location": { "lat": -33.447, "lon": -70.652 },
+    "menu": [
+      { "name": "Helado Sabor Sorpresa", "description": "Pregunta por nuestros sabores de la semana. ¡Atrévete a probar!", "regularPrice": 3800, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/heladosorpresa/400/300" },
+      { "name": "Café Affogato", "description": "Una bola de helado de vainilla ahogada en un shot de espresso caliente.", "regularPrice": 4200, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/affogato/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "El Camino BBQ",
+    "description": "Auténtico barbecue tejano. Brisket, costillas y pulled pork ahumados por horas.",
+    "address": "Av. Italia 1034, Providencia",
+    "imageUrl": "https://picsum.photos/seed/ElCaminoBBQ/800/600",
+    "location": { "lat": -33.449, "lon": -70.625 },
+    "menu": [
+      { "name": "Brisket (1/4 Lb)", "description": "Pecho de vacuno ahumado por 14 horas. Tierno y jugoso.", "regularPrice": 10000, "rating": 5.0, "imageUrl": "https://picsum.photos/seed/brisket/400/300" },
+      { "name": "Pulled Pork Sandwich", "description": "Cerdo desmenuzado en pan de papa con coleslaw.", "regularPrice": 8500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/pulledpork/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "La Cocina de Javier",
+    "description": "Comida casera con amor. Menús diarios que te harán sentir como en casa.",
+    "address": "Huérfanos 1300, Santiago Centro",
+    "imageUrl": "https://picsum.photos/seed/CocinaJavier/800/600",
+    "location": { "lat": -33.442, "lon": -70.655 },
+    "menu": [
+      { "name": "Menú del Día Completo", "description": "Sopa, fondo, postre y jugo. Consulta la opción del día.", "regularPrice": 5990, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/menujavier/400/300" },
+      { "name": "Charquicán con Huevo Frito", "description": "Un clásico chileno, contundente y sabroso.", "regularPrice": 6500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/charquican/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Transferencia", "Junaeb (Sodexo)" ],
+    "discounts": []
+  },
+  {
+    "name": "Poke Bar",
+    "description": "Crea tu propio bowl de poke con ingredientes frescos y saludables. Rápido y delicioso.",
+    "address": "Av. Andrés Bello 2425, Providencia (Costanera Center)",
+    "imageUrl": "https://picsum.photos/seed/PokeBar/800/600",
+    "location": { "lat": -33.418, "lon": -70.607 },
+    "menu": [
+      { "name": "Arma tu Poke Bowl", "description": "Elige tu base, proteína, vegetales, toppings y salsa.", "regularPrice": 8900, "rating": 4.6, "imageUrl": "https://picsum.photos/seed/pokebowl/400/300" },
+      { "name": "Tsunami Poke (Sugerencia)", "description": "Arroz, salmón, palta, edamame, mango y salsa acevichada.", "regularPrice": 9500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/tsunamipoke/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta", "Junaeb (Sodexo)" ],
+    "discounts": []
+  },
+  {
+    "name": "Fuente Mardoqueo",
+    "description": "Sándwiches gigantes y sabrosos. Un ícono de la comida rápida chilena.",
+    "address": "Libertad 551, Barrio Yungay, Santiago",
+    "imageUrl": "https://picsum.photos/seed/Mardoqueo/800/600",
+    "location": { "lat": -33.440, "lon": -70.672 },
+    "menu": [
+      { "name": "Lomito Completo", "description": "Lomo de cerdo en pan frica con chucrut, tomate, mayonesa y salsa americana.", "regularPrice": 9000, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/lomitocompleto/400/300" },
+      { "name": "Papas Fritas Mardoqueo", "description": "Una porción enorme de papas fritas caseras.", "regularPrice": 4500, "rating": 4.7, "imageUrl": "https://picsum.photos/seed/papasfritas/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta" ],
+    "discounts": []
+  },
+  {
+    "name": "Karai by Mitsuharu",
+    "description": "Cocina Nikkei de alta gama del reconocido chef Mitsuharu Tsumura. Una experiencia única.",
+    "address": "Isidora Goyenechea 3000, Las Condes (Hotel W)",
+    "imageUrl": "https://picsum.photos/seed/Karai/800/600",
+    "location": { "lat": -33.419, "lon": -70.600 },
+    "menu": [
+      { "name": "Nigiris de Foie Gras", "description": "Una combinación increíble de sabores que no olvidarás.", "regularPrice": 12000, "rating": 5.0, "imageUrl": "https://picsum.photos/seed/nigirifoiegras/400/300" },
+      { "name": "Tiradito a la Parmesana", "description": "Finas láminas de ostiones gratinadas con queso parmesano.", "regularPrice": 15000, "rating": 4.9, "imageUrl": "https://picsum.photos/seed/tiraditoparmesana/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": [],
+    "event": { "title": "Omakase Experience", "description": "Deja que el chef te sorprenda con un menú de degustación especial. Requiere reserva." }
+  },
+  {
+    "name": "La Casona del Centro",
+    "description": "Buffet de comida chilena. Sirve lo que quieras, las veces que quieras.",
+    "address": "Agustinas 972, Santiago Centro",
+    "imageUrl": "https://picsum.photos/seed/CasonaCentro/800/600",
+    "location": { "lat": -33.441, "lon": -70.651 },
+    "menu": [
+      { "name": "Buffet Libre Almuerzo", "description": "Acceso a todas nuestras estaciones: ensaladas, platos calientes, postres.", "regularPrice": 12990, "rating": 4.4, "imageUrl": "https://picsum.photos/seed/buffet/400/300" }
+    ],
+    "paymentMethods": [ "Efectivo", "Tarjeta", "Junaeb (Sodexo)", "Ticket Restaurant" ],
+    "discounts": [ { "sponsor": "Convenio Empresas", "type": "%", "amount": 10, "validFrom": "2024-01-01", "validTo": "2024-12-31", "daysOfWeek": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"], "appliesTo": "Mostrando credencial" } ]
+  },
+  {
+    "name": "Oporto Steak Bar",
+    "description": "Carnes maduradas en seco y una coctelería de autor excepcional. Perfecto para negocios o una cita.",
+    "address": "Isidora Goyenechea 3477, Las Condes",
+    "imageUrl": "https://picsum.photos/seed/Oporto/800/600",
+    "location": { "lat": -33.415, "lon": -70.589 },
+    "menu": [
+      { "name": "Tomahawk (para compartir)", "description": "Impresionante corte de 1.2kg madurado por 45 días.", "regularPrice": 55000, "rating": 5.0, "imageUrl": "https://picsum.photos/seed/tomahawk/400/300" },
+      { "name": "Papas Trufadas", "description": "Papas fritas con aceite de trufa blanca y queso parmesano.", "regularPrice": 7500, "rating": 4.8, "imageUrl": "https://picsum.photos/seed/papastrufadas/400/300" }
+    ],
+    "paymentMethods": [ "Tarjeta" ],
+    "discounts": []
   }
 ]
