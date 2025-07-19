@@ -1,6 +1,6 @@
 {
-  "name": "Almuerzo.cl AI API Monitor",
-  "description": "A UI to monitor API calls to the /api/restaurants endpoint, featuring an AI-powered traffic simulator to model requests from external sources.",
+  "name": "Almuerzo.cl - Restaurant Data API",
+  "description": "A simple, public API endpoint that serves a list of restaurant data. Accessible via a GET request to /api/restaurants.",
   "requestFramePermissions": [],
   "prompt": ""
 }

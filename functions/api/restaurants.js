@@ -1,3 +1,4 @@
+
 // functions/api/restaurants.js
 
 // Import the static JSON data directly from the same directory.
@@ -9,7 +10,8 @@ import restaurantData from './restaurants.json';
  */
 export async function onRequestGet(context) {
   // Return the imported restaurant data as a JSON response.
-  return new Response(JSON.stringify(restaurantData), {
+  // The `null, 2` argument formats the JSON nicely with indentation, making it easy to read in a browser.
+  return new Response(JSON.stringify(restaurantData, null, 2), {
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*', // Allow cross-origin requests
