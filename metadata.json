@@ -1,6 +1,6 @@
 {
   "name": "Almuerzo.cl - Restaurant Data API",
-  "description": "A simple, public API endpoint that serves a list of restaurant data. Accessible via a GET request to /api/restaurants.",
+  "description": "A simple, public API that serves restaurant data. The root endpoint provides a list of available API paths. The main data is accessible via a GET request to /api/restaurants.",
   "requestFramePermissions": [],
   "prompt": ""
 }

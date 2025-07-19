@@ -1,37 +1,51 @@
+// /functions/api/restaurants.js
 
-// functions/api/restaurants.js
+import data from '../data/restaurants.json';
 
-// Import the static JSON data directly from the same directory.
-// This is a more robust pattern for Cloudflare Pages Functions.
-import restaurantData from './restaurants.json';
-
-/**
- * Handles GET requests to /api/restaurants
- */
-export async function onRequestGet(context) {
-  // Return the imported restaurant data as a JSON response.
-  // The `null, 2` argument formats the JSON nicely with indentation, making it easy to read in a browser.
-  return new Response(JSON.stringify(restaurantData, null, 2), {
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*', // Allow cross-origin requests
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    }
-  });
-}
+// Common headers for enabling Cross-Origin Resource Sharing (CORS).
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Headers': '*', // Allow any headers, simplifies preflight
+};
 
 /**
- * Handles OPTIONS requests (for CORS preflight)
- * This is necessary for browsers to allow cross-origin requests.
+ * Handles OPTIONS requests for CORS preflight. Browsers send these requests
+ * to check permissions before making the actual request (e.g., GET).
+ * This handler is essential for the frontend application to be able to call the API.
  */
-export async function onRequestOptions(context) {
+export function onRequestOptions(context) {
   return new Response(null, {
+    status: 204, // No Content
     headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      ...corsHeaders,
       'Access-Control-Max-Age': '86400', // Cache preflight response for 24 hours
-    }
+    },
   });
-}
+};
+
+/**
+ * Handles GET requests to fetch the restaurant data.
+ * It returns the content of the local `restaurants.json` file.
+ */
+export function onRequestGet(context) {
+  try {
+    const body = JSON.stringify(data, null, 2);
+    return new Response(body, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
+    });
+  } catch (error) {
+    console.error('Data serving error:', error);
+    const errorBody = JSON.stringify({ error: 'Failed to prepare restaurant data.' });
+    return new Response(errorBody, {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
+    });
+  }
+};
