@@ -39,7 +39,7 @@ export function onRequestGet(context) {
       {
         path: "/api/events",
         method: "POST",
-        description: "Receives a batch of user analytics events ('customer_info')."
+        description: "Receives a batch of user analytics events and stores them as a JSON file in Cloudflare R2."
       }
     ]
   };

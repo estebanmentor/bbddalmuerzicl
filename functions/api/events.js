@@ -24,6 +24,7 @@ export function onRequestOptions(context) {
 
 /**
  * Handles POST requests to ingest a batch of user analytics events.
+ * Stores each batch as a unique JSON file in a Cloudflare R2 bucket.
  */
 export async function onRequestPost(context) {
   try {
@@ -49,12 +50,17 @@ export async function onRequestPost(context) {
       );
     }
 
-    // "Store" the data by logging it to the function's execution logs.
-    // In a production setup, this would be replaced with a database insert (e.g., Cloudflare D1).
-    console.log('Received customer_info batch:', JSON.stringify(events, null, 2));
+    // This is the R2 bucket you bind in your Cloudflare dashboard.
+    const bucket = context.env.ANALYTICS_BUCKET;
+
+    // Create a unique filename for this batch using a timestamp.
+    const filename = `events-${new Date().toISOString()}.json`;
+
+    // Upload the JSON data as a new file to the R2 bucket.
+    await bucket.put(filename, JSON.stringify(events, null, 2));
 
     // Respond with 200 OK to signal success to the client.
-    return new Response(JSON.stringify({ success: true, received_events: events.length }), {
+    return new Response(JSON.stringify({ success: true, file_created: filename, received_events: events.length }), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
@@ -75,8 +81,8 @@ export async function onRequestPost(context) {
           );
     }
 
-    // Generic server error for other issues
-    const errorBody = JSON.stringify({ error: 'Failed to process analytics data.' });
+    // Generic server error for other issues, including R2 failures
+    const errorBody = JSON.stringify({ error: 'Failed to process and store analytics data.' });
     return new Response(errorBody, {
       status: 500,
       headers: {

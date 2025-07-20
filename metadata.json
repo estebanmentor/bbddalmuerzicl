@@ -1,7 +1,7 @@
 
 {
   "name": "Almuerzo.cl - Data API",
-  "description": "A public API for Almuerzo.cl. Provides restaurant data via GET /api/restaurants and ingests user analytics via POST /api/events.",
+  "description": "A public API for Almuerzo.cl. Provides restaurant data via GET /api/restaurants and ingests user analytics via POST /api/events, storing each batch as a JSON file in Cloudflare R2.",
   "requestFramePermissions": [],
   "prompt": ""
 }
