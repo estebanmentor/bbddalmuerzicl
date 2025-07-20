@@ -1,3 +1,4 @@
+
 // /functions/index.js
 
 // Common headers for enabling Cross-Origin Resource Sharing (CORS).
@@ -30,7 +31,16 @@ export function onRequestGet(context) {
     message: "Welcome to the Almuerzo.cl API root.",
     description: "This is the entry point for the Almuerzo.cl serverless functions.",
     available_endpoints: [
-      "/api/restaurants"
+      {
+        path: "/api/restaurants",
+        method: "GET",
+        description: "Retrieves the full list of restaurant data."
+      },
+      {
+        path: "/api/events",
+        method: "POST",
+        description: "Receives a batch of user analytics events ('customer_info')."
+      }
     ]
   };
 
